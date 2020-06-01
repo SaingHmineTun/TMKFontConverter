@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#014948</color>-->
+    <color name="colorSecondary">#6c757d</color>
+    <color name="colorSuccess">#28a745</color>
+    <color name="colorInfo">#17a2b8</color>
+    <color name="colorDanger">#F44336</color>
+    <color name="colorLight">#f8f9fa</color>
+    <color name="colorDark">#343a40</color>
+    <color name="colorSelected">#217938</color>
+    <!--<color name="colorPrimaryDark">#00574B</color>-->
+    <!--<color name="colorAccent">#D81B60</color>-->
+
+
+    <color name="colorPrimary">#125688</color>
+    <color name="colorPrimaryDark">#125688</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#c8e8ff</color>
+    <color name="background">#DDD</color>
+
+</resources>
