@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.btConvert.setOnClickListener(this::convert);
         binding.btCopy.setOnClickListener(this::copy);
         binding.btCopy.setOnLongClickListener(this::copyBoth);
-        binding.btFix.setOnClickListener(this::fix);
         binding.btClear.setOnClickListener(this::clear);
     }
 
@@ -118,13 +117,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ClipboardManager clipboard = (ClipboardManager) this.getSystemService(CLIPBOARD_SERVICE);
         ClipData clip = ClipData.newPlainText("Copied Text", text);
         clipboard.setPrimaryClip(clip);
-    }
-
-    public void fix(View view) {
-        String input = binding.edInput.getText().toString();
-        if (!input.isEmpty() && binding.rbZg2Uni.isSelected()) {
-            binding.edOutput.setText(ShanZawgyiConverter.zg2uni(ShanZawgyiConverter.uni2zg(input)));
-        }
     }
 
     @Override
