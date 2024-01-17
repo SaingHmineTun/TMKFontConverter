@@ -1,25 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:weightSum="1"
     tools:context=".fontconverter.MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+
+    <RadioGroup
+        android:id="@+id/rgroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Widget.Design.AppBarLayout">
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="1">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <RadioButton
+            android:layout_marginEnd="2.5dp"
+            android:id="@+id/rbUni2Zg"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/radio_flat_selector"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:checked="true"
+            android:textColor="@color/colorLight"
+            android:text="Unicode to Zawgyi" />
+
+        <RadioButton
+            android:layout_marginStart="2.5dp"
+            android:id="@+id/rbZg2Uni"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/radio_flat_selector"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:textColor="@color/colorLight"
+            android:text="Zawgyi to Unicode" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/etLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edInputLayout"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Widget.AppCompat.Toolbar" />
+            android:layout_height="match_parent"
+            android:hint="Unicode"
+            app:expandedHintEnabled="false"
+            android:padding="10dp">
 
-    </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="top"/>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:weightSum="4">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btConvert"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/convert"
+            android:background="@drawable/radio_flat_selector"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btFix"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/fix"
+            android:background="@drawable/radio_flat_selector"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btCopy"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:longClickable="true"
+            android:src="@drawable/copy"
+            android:background="@drawable/radio_flat_selector"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btClear"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/delete"
+            android:background="@drawable/radio_flat_selector"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/etLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:gravity="top">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edOutputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Zawgyi"
+            app:expandedHintEnabled="false"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edOutput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="top" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+</LinearLayout>
