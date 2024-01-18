@@ -1,18 +1,21 @@
 # TMK Font Converter (Android Version)
-App ဢၼ်ၼႆႉတေၸွႆႈထႅမ်ပၼ် ႁႂ်ႈပိၼ်ႇလႆႈ Unicode လႄႈ Zawgyi ယဝ်ႉ။ 
-သူတေလႆႈႁူႉလွင်ႈ Font Converter သေ ဢမ်ႇၵႃး Font Detector ၵေႃႈ လႆႈသႂ်ႇဝႆႉပႃးယဝ်ႉ။
+This app can convert Shan texts between Zawgyi-Tai and Unicode.
 
-ပေႃးၶႆႈၸၢမ်းတူၺ်း ဢွၼ်တၢင်းၵေႃႈ လူတ်ႇလူင်းဢဝ်လႆႈ တီႈၼိူဝ် Play Store ယူႇ။
-
+*You can download and use it here!*
 
 https://play.google.com/store/apps/details?id=it.saimao.tmkfontconverter
 
-ယွၼ်ႉပိူဝ်ႈဢမ်ႇၸႂ်ႈၵူၼ်းၶႅၼ်ႇလႄႈ Code မၼ်ၵေႃႈတေဢမ်ႇၶိုၵ်ႉ။ ၼႆတေႉ ပွင်ႇၸႂ်ပၼ်သေၵမ်း။ 
-ပေႃးႁဵၼ်းပေႃးႁူႉၵေႃႈ ၸွႆႈၵၼ်ၶူင်သၢင်ႈ App တႃႇ ၶိူဝ်းတႆး ၼမ်ၼမ်တႃႉ။
 
-ၼႂ်း App ၼႆႉ သူ​တေလႆႈလဵပ်ႈႁဵၼ်းလွင်ႈ Font Converter ​လႄႈ Font Detector. 
-တွၼ်ႈတႃႇ Converter ​တေႉ ၶႃႈလႆႈ ပိူင်ႈဢိင် Rabbit Converter ​သေ လႆႈၽိူမ်ႉသႂ်ႇ ႁႂ်ႈပိၼ်ႇလႆႈပႃး လိၵ်ႈတႆး။
-တွၼ်ႈတႃႇ Detector ၼႆႉသမ်ႉ ၶႃႈလႆႈၸႂ်ႉဝႆႉ Myanmar Tools တႃႇ လိၵ်ႈမၢၼ်ႈ။ တႃႇလိၵ်ႈတႆး​တေႉ ၶႃႈလႆႈဢဝ် idea ၶႃႈ​သေ ႁဵတ်ႉဝႆႉ။ ​
-ပေႃးသူမီး idea ဢၼ်​တေ ၶိုၵ်ႉၶႅမ်ႉ​သေၶႃႈ​ၵေႃႈ ႁဵတ်ႉ​ဢဝ်​ၶေႃ​ၶေႃတႃႉ။ ၶႃႈ​တေႉ ပၼ်ႁႅင်းယူႇ တႃႇ​​သေႇ။ 
+***Usage***
+1) You input text that you want to convert in upper tex box.
+2) You choose whether you want to convert between *Zawyi to Unicode* or *Unicode to Zawgyi* from above radio buttons
+3) You click **CONVERT** button.
 
- 
+
+## Main App UI
+![416016997_396903899498530_5456082253274350893_n](https://github.com/SaingHmineTun/TMKFontConverter/assets/41017501/adbfb82b-6134-41ea-9188-0fd230d8ad34)
+
+
+## About Us App UI
+![416141423_362407253222991_4589561467290543014_n](https://github.com/SaingHmineTun/TMKFontConverter/assets/41017501/0cf86597-c330-475d-9c7c-187077e0a2d7)
+
