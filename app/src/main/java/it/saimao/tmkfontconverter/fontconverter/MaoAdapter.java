@@ -13,20 +13,19 @@ import it.saimao.tmkfontconverter.R;
 
 public class MaoAdapter extends BaseAdapter {
 
-    Context context;
-    String[] stringsAsk, stringsValues;
-    int icons[];
-    LayoutInflater inflater;
-    private Typeface uniTypeface;
+    private final String[] stringsAsk;
+    private final String[] stringsValues;
+    private final int[] icons;
+    private final LayoutInflater inflater;
+    private final Typeface uniTypeface;
 
 
     public MaoAdapter(Context context, String[] stringsAsk, String[] stringsValues, int[] icons) {
-        this.context = context;
         this.stringsAsk = stringsAsk;
         this.stringsValues = stringsValues;
         this.icons = icons;
-        inflater = LayoutInflater.from(context);;
-        uniTypeface = Typeface.createFromAsset(context.getAssets(), "fonts/unicode.ttf");
+        this.inflater = LayoutInflater.from(context);;
+        this.uniTypeface = Typeface.createFromAsset(context.getAssets(), "fonts/unicode.ttf");
     }
 
     @Override

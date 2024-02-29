@@ -131,7 +131,6 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         } else {
             binding.edInput.setTypeface(zgTypeface);
             binding.edInputLayout.setHint("Zawgyi");
-
             binding.edOutput.setTypeface(uniTypeface);
             binding.edOutputLayout.setHint("Unicode");
         }

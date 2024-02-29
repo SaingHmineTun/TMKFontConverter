@@ -21,29 +21,29 @@
         android:weightSum="1">
 
         <RadioButton
-            android:layout_marginEnd="5dp"
             android:id="@+id/rbUni2Zg"
             android:layout_width="0dp"
             android:layout_height="35dp"
+            android:layout_marginEnd="5dp"
             android:layout_weight="0.5"
             android:background="@drawable/radio_flat_selector"
             android:button="@android:color/transparent"
-            android:gravity="center"
             android:checked="true"
-            android:textColor="@color/colorLight"
-            android:text="Unicode to Zawgyi" />
+            android:gravity="center"
+            android:text="Unicode to Zawgyi"
+            android:textColor="@color/colorLight" />
 
         <RadioButton
-            android:layout_marginStart="5dp"
             android:id="@+id/rbZg2Uni"
             android:layout_width="0dp"
             android:layout_height="35dp"
+            android:layout_marginStart="5dp"
             android:layout_weight="0.5"
             android:background="@drawable/radio_flat_selector"
             android:button="@android:color/transparent"
             android:gravity="center"
-            android:textColor="@color/colorLight"
-            android:text="Zawgyi to Unicode" />
+            android:text="Zawgyi to Unicode"
+            android:textColor="@color/colorLight" />
     </RadioGroup>
 
     <LinearLayout
@@ -58,15 +58,17 @@
             android:layout_height="match_parent"
             android:layout_gravity="top"
             android:hint="@string/unicode"
-            android:padding="10dp">
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            app:boxStrokeWidth="0dp">
 
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edInput"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:minLines="2"
-                android:gravity="top" />
+                android:gravity="top"
+                android:minLines="2" />
 
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
@@ -75,39 +77,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp"
-        android:weightSum="3">
+        android:gravity="center_horizontal"
+        android:padding="10dp">
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/btConvert"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_marginEnd="5dp"
-            android:layout_weight="1"
-            android:src="@drawable/convert"
-            android:background="@drawable/radio_flat_selector" />
+            android:padding="10dp"
+            android:background="@drawable/radio_flat_selector"
+            android:src="@drawable/convert" />
 
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/btCopy"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_weight="1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="10dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/radio_flat_selector"
             android:longClickable="true"
-            android:src="@drawable/copy"
-            android:background="@drawable/radio_flat_selector" />
+            android:src="@drawable/copy" />
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/btClear"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_marginStart="5dp"
-            android:layout_weight="1"
-            android:src="@drawable/delete"
+            android:padding="10dp"
+            android:background="@drawable/radio_flat_selector"
             android:backgroundTint="@color/colorDanger"
-            android:background="@drawable/radio_flat_selector" />
+            android:src="@drawable/delete" />
 
     </LinearLayout>
 
@@ -122,7 +124,10 @@
             android:id="@+id/edOutputLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp">
+            android:hint="@string/zawgyi"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            app:boxStrokeWidth="0dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edOutput"
@@ -130,9 +135,8 @@
                 android:layout_height="match_parent"
                 android:editable="false"
                 android:focusable="false"
-                android:minLines="2"
-                android:hint="@string/zawgyi"
-                android:gravity="top" />
+                android:gravity="top"
+                android:minLines="2" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 </LinearLayout>
