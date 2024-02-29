@@ -57,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="top"
-            android:hint="Unicode"
+            android:hint="@string/unicode"
             android:padding="10dp">
 
 
@@ -131,7 +131,7 @@
                 android:editable="false"
                 android:focusable="false"
                 android:minLines="2"
-                android:hint="Zawgyi"
+                android:hint="@string/zawgyi"
                 android:gravity="top" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>

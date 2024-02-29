@@ -10,17 +10,15 @@ import it.saimao.tmkfontconverter.R;
 
 
 public class WelcomeActivity extends AppCompatActivity {
-    Handler handler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-        handler = new Handler();
-        handler.postDelayed(() -> {
+        new Handler().postDelayed(() -> {
             Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
-        }, 1500);
+        }, 1000);
 
     }
 }

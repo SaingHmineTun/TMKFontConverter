@@ -16,18 +16,16 @@ import it.saimao.tmkfontconverter.R;
 public class AboutUsActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
 
-    private ListView simpleListView;
-    private String[] stringsAsk = {"E-mail:", "Facebook:", "Rate this app on Play Store"};
-    private String[] stringsValue = {"tmk.muse@gmail.com", "ထုင့်မၢဝ်းၶမ်း", ""};
-    int[] icons = {R.drawable.ic_gmail, R.drawable.ic_facebook, R.drawable.ic_playstore};
-    private TextView txtSlogan;
+    private final String[] stringsAsk = {"E-mail:", "Facebook:", "Github:", "Rate this app on Play Store"};
+    private final String[] stringsValue = {"tmk.muse@gmail.com", "ထုင့်မၢဝ်းၶမ်း", "Get source code", ""};
+    private final int[] icons = {R.drawable.ic_gmail, R.drawable.ic_facebook, R.drawable.github, R.drawable.ic_playstore};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
-        txtSlogan = findViewById(R.id.ourSlogan);
-        simpleListView = findViewById(R.id.simpleListView);
+        TextView txtSlogan = findViewById(R.id.ourSlogan);
+        ListView simpleListView = findViewById(R.id.simpleListView);
         Typeface uniTypeface = Typeface.createFromAsset(getAssets(), "fonts/unicode.ttf");
         txtSlogan.setTypeface(uniTypeface);
         MaoAdapter adapter = new MaoAdapter(getBaseContext(), stringsAsk, stringsValue, icons);

@@ -8,13 +8,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import it.saimao.tmkfontconverter.R;
 import it.saimao.tmkfontconverter.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
     private Typeface zgTypeface, uniTypeface;
 
@@ -27,7 +28,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
         // Set default typeface for 2 EditText
         zgTypeface = Typeface.createFromAsset(getAssets(), "fonts/zawgyi.ttf");
         uniTypeface = Typeface.createFromAsset(getAssets(), "fonts/unicode.ttf");
@@ -35,8 +35,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.edOutput.setTypeface(zgTypeface);
 
         // Listen action
-        binding.rbUni2Zg.setOnClickListener(this);
-        binding.rbZg2Uni.setOnClickListener(this);
+        binding.rbUni2Zg.setOnCheckedChangeListener(this);
+        binding.rbZg2Uni.setOnCheckedChangeListener(this);
+
         binding.btConvert.setOnClickListener(this::convert);
         binding.btCopy.setOnClickListener(this::copy);
         binding.btCopy.setOnLongClickListener(this::copyBoth);
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String result;
         String input = binding.edInput.getText().toString();
         if (!input.isEmpty()) {
-            if (binding.rbZg2Uni.isSelected()) {
+            if (binding.rbZg2Uni.isChecked()) {
                 binding.edOutput.setTypeface(uniTypeface);
                 result = ShanZawgyiConverter.zg2uni(input);
             } else {
@@ -101,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return false;
         }
         String text;
-        if (binding.rbZg2Uni.isSelected()) {
+        if (binding.rbZg2Uni.isChecked()) {
             text = "#Unicode#\n" + outputText + "\n#Zawgyi#\n" + inputText;
         } else {
             text = "#Unicode#\n" + inputText + "\n#Zawgyi#\n" + outputText;
@@ -120,17 +121,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View view) {
-        if (view.getId() == R.id.rbUni2Zg) {
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+        if (binding.rbUni2Zg.isChecked()) {
             binding.edInput.setTypeface(uniTypeface);
             binding.edInputLayout.setHint("Unicode");
-            binding.edOutputLayout.setHint("Zawgyi");
             binding.edOutput.setTypeface(zgTypeface);
-        } else if (view.getId() == R.id.rbZg2Uni) {
+            binding.edOutputLayout.setHint("Zawgyi");
+        } else {
+            binding.edInput.setTypeface(zgTypeface);
+            binding.edInputLayout.setHint("Zawgyi");
+
             binding.edOutput.setTypeface(uniTypeface);
             binding.edOutputLayout.setHint("Unicode");
-            binding.edInputLayout.setHint("Zawgyi");
-            binding.edInput.setTypeface(zgTypeface);
         }
+
     }
 }
