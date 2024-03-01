@@ -41,7 +41,19 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         binding.btConvert.setOnClickListener(this::convert);
         binding.btCopy.setOnClickListener(this::copy);
         binding.btCopy.setOnLongClickListener(this::copyBoth);
+        binding.btFix.setOnClickListener(this::fix);
         binding.btClear.setOnClickListener(this::clear);
+    }
+
+    private void fix(View view) {
+        if (binding.rbZg2Uni.isChecked()) {
+            String input = binding.edInput.getText().toString();
+            input = ShanZawgyiConverter.uni2zg(input);
+            input = ShanZawgyiConverter.zg2uni(input);
+            binding.edOutput.setText(input);
+        } else {
+            Toast.makeText(this, "Only work in converting Zawgyi to Unicode", Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override

@@ -24,7 +24,7 @@ public class MaoAdapter extends BaseAdapter {
         this.stringsAsk = stringsAsk;
         this.stringsValues = stringsValues;
         this.icons = icons;
-        this.inflater = LayoutInflater.from(context);;
+        this.inflater = LayoutInflater.from(context);
         this.uniTypeface = Typeface.createFromAsset(context.getAssets(), "fonts/unicode.ttf");
     }
 

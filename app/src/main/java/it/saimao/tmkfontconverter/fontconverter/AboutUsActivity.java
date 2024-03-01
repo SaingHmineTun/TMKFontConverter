@@ -24,10 +24,7 @@ public class AboutUsActivity extends AppCompatActivity implements AdapterView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
-        TextView txtSlogan = findViewById(R.id.ourSlogan);
         ListView simpleListView = findViewById(R.id.simpleListView);
-        Typeface uniTypeface = Typeface.createFromAsset(getAssets(), "fonts/unicode.ttf");
-        txtSlogan.setTypeface(uniTypeface);
         MaoAdapter adapter = new MaoAdapter(getBaseContext(), stringsAsk, stringsValue, icons);
         simpleListView.setOnItemClickListener(this);
         simpleListView.setAdapter(adapter);

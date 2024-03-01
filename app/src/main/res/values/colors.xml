@@ -12,8 +12,8 @@
     <!--<color name="colorAccent">#D81B60</color>-->
 
 
-    <color name="colorPrimary">#125688</color>
-    <color name="colorPrimaryLight">#136FB5</color>
+    <color name="colorPrimary">#0F6690</color>
+    <color name="colorPrimaryLight">#00A5D7</color>
     <color name="textColorPrimary">#FFFFFF</color>
     <color name="windowBackground">#FFFFFF</color>
     <color name="navigationBarColor">#000000</color>

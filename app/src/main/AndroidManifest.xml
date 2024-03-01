@@ -18,7 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".fontconverter.AboutUsActivity" android:parentActivityName=".fontconverter.MainActivity" />
+        <activity android:name=".fontconverter.AboutUsActivity" android:label="About Developer" android:parentActivityName=".fontconverter.MainActivity" />
         <activity android:name=".fontconverter.MainActivity" />
     </application>
 

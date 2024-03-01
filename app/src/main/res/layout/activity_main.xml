@@ -23,7 +23,7 @@
         <RadioButton
             android:id="@+id/rbUni2Zg"
             android:layout_width="0dp"
-            android:layout_height="35dp"
+            android:layout_height="48dp"
             android:layout_marginEnd="5dp"
             android:layout_weight="0.5"
             android:background="@drawable/radio_flat_selector"
@@ -36,7 +36,7 @@
         <RadioButton
             android:id="@+id/rbZg2Uni"
             android:layout_width="0dp"
-            android:layout_height="35dp"
+            android:layout_height="48dp"
             android:layout_marginStart="5dp"
             android:layout_weight="0.5"
             android:background="@drawable/radio_flat_selector"
@@ -78,16 +78,26 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_horizontal"
-        android:padding="10dp">
+        android:padding="8dp">
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/btConvert"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_marginEnd="5dp"
+            android:layout_marginEnd="20dp"
             android:padding="10dp"
-            android:background="@drawable/radio_flat_selector"
+            android:background="@drawable/btn_ripple"
             android:src="@drawable/convert" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btFix"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/btn_ripple"
+            android:longClickable="true"
+            android:src="@drawable/fix" />
 
 
         <androidx.appcompat.widget.AppCompatImageButton
@@ -95,9 +105,8 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:padding="10dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="40dp"
-            android:background="@drawable/radio_flat_selector"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/btn_ripple"
             android:longClickable="true"
             android:src="@drawable/copy" />
 
@@ -107,7 +116,7 @@
             android:layout_height="48dp"
             android:layout_marginStart="5dp"
             android:padding="10dp"
-            android:background="@drawable/radio_flat_selector"
+            android:background="@drawable/btn_ripple"
             android:backgroundTint="@color/colorDanger"
             android:src="@drawable/delete" />
 
